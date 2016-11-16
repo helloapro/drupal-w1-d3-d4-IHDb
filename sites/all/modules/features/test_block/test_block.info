@@ -1,0 +1,6 @@
+name = test block
+description = adding test block
+core = 7.x
+package = Features
+features[features_api][] = api:2
+project path = sites/all/modules/features
