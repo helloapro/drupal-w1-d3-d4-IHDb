@@ -1,0 +1,7 @@
+<?php
+/**
+ * @file
+ * Code for the Historic Figures feature.
+ */
+
+include_once 'historic_figures.features.inc';
