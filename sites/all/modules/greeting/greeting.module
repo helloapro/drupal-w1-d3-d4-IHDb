@@ -1,0 +1,30 @@
+<?php
+function greeting_menu() {
+    $items = array();
+    $items['hello'] = array(
+            'title' => 'Hello!',
+            'page callback' => 'say_hello',
+            'access callback' => TRUE,
+            'type' => MENU_CALLBACK,
+    );
+    $items['goodbye'] = array(
+            'title' => 'Goodbye!',
+            'page callback' => 'say_goodbye',
+            'access callback' => TRUE,
+            'type' => MENU_CALLBACK,
+    );
+    return $items;
+}
+
+function say_hello() {
+    return '<p>Welcome to THE Internet History Database!</p>';
+}
+function say_goodbye() {
+    return '<p>Until next time! We hope you go make some history yeself!</p>';
+}
+function greeting_user_login() {
+    $_GET['destination'] = 'hello';
+}
+function greeting_user_logout() {
+    $_GET['destination'] = 'goodbye';
+}

@@ -1,0 +1,6 @@
+name = Event
+description = Displays historical event with image and link.
+package = Epicodus Example
+core = 7.x
+files[] = event.module
+stylesheets[all][] = styles.css

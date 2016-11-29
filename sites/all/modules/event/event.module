@@ -1,0 +1,36 @@
+<?php
+function event_menu() {
+    $items = array();
+
+    $favorite_events['moon-landing'] = array(
+        'Name' => 'Moon Landing',
+        'Image' => 'moon-landing.jpg',
+        'Link' => 'https://en.wikipedia.org/wiki/Moon_landing',
+    );
+    $favorite_events['emancipation'] = array(
+        'Name' => 'Emancipation of Slaves in the U.S.',
+        'Image' => 'emancipation.jpg',
+        'Link' => 'https://en.wikipedia.org/wiki/Emancipation_Proclamation',
+    );
+    $favorite_events['microsoft-start'] = array(
+        'Name' => 'The Founding of Microsoft',
+        'Image' => 'microsoft-staff.jpg',
+        'Link' => 'https://en.wikipedia.org/wiki/History_of_Microsoft',
+    );
+
+    // $items['event'] = array(
+    //         'title' => 'My Favorite Historical Event',
+    //         'page callback' => 'display_event',
+    //         'access callback' => TRUE,
+    //         'type' => MENU_NORMAL_ITEM,
+    // );
+    // return $items;
+}
+
+// function display_event() {
+//     return '
+//         <img class="img-responsive" src="sites/all/modules/event/moon-landing.jpg" alt="landing">
+//         <br>
+//         <h3 class="event-link"><a href="https://en.wikipedia.org/wiki/Moon_landing">Learn more about the moon landing.</a><h3>
+//     ';
+// }
