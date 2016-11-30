@@ -8,29 +8,32 @@ function event_menu() {
         'Link' => 'https://en.wikipedia.org/wiki/Moon_landing',
     );
     $favorite_events['emancipation'] = array(
-        'Name' => 'Emancipation of Slaves in the U.S.',
+        'Name' => 'Emancipation of Slaves in the US',
         'Image' => 'emancipation.jpg',
         'Link' => 'https://en.wikipedia.org/wiki/Emancipation_Proclamation',
     );
     $favorite_events['microsoft-start'] = array(
-        'Name' => 'The Founding of Microsoft',
+        'Name' => 'Founding of Microsoft',
         'Image' => 'microsoft-staff.jpg',
         'Link' => 'https://en.wikipedia.org/wiki/History_of_Microsoft',
     );
 
-    // $items['event'] = array(
-    //         'title' => 'My Favorite Historical Event',
-    //         'page callback' => 'display_event',
-    //         'access callback' => TRUE,
-    //         'type' => MENU_NORMAL_ITEM,
-    // );
-    // return $items;
+    foreach($favorite_events as $favorite_event) {
+        $items['event/' . $favorite_event['Name']] = array(
+            'title' => $favorite_event['Name'],
+            'page callback' => 'display_event',
+            'access callback' => TRUE,
+            'type' => MENU_NORMAL_ITEM,
+            'page arguments' => array($favorite_event['Name'], $favorite_event['Image'], $favorite_event['Link']),
+        );
+    }
+    return $items;
 }
 
-// function display_event() {
-//     return '
-//         <img class="img-responsive" src="sites/all/modules/event/moon-landing.jpg" alt="landing">
-//         <br>
-//         <h3 class="event-link"><a href="https://en.wikipedia.org/wiki/Moon_landing">Learn more about the moon landing.</a><h3>
-//     ';
-// }
+function display_event($name, $image, $link) {
+    return '
+        <img class="img-responsive" src="../sites/all/modules/event/' . $image . '" alt="' . $image . '">
+        <br>
+        <h3 class="event-link"><a href="' . $link . '">Learn more about the ' . $name . '.</a><h3>
+    ';
+}
