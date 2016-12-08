@@ -1,0 +1,41 @@
+/* http://paletton.com/#uid=335180kjAtCrjEDtZu+8CysbEoD */
+body > div.layout-center > header > nav {
+  margin-top: -20px;
+}
+
+body > div.layout-center > header > nav li a {
+  color: #fff;
+  text-decoration: none;
+}
+
+body > div.layout-center > header > nav li a:hover {
+  text-decoration: underline;
+}
+
+.header, body > div.layout-center > div.layout-3col.layout-swap > div {
+  background: #3E9F7A;
+  padding: 10px;
+}
+
+body > div.layout-center:before {
+  content: "";
+  display: table;
+}
+
+body > div.layout-center:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+#block-system-navigation {
+  float: left;
+  width: 100%;
+  margin-left: 0%;
+  margin-right: -100%;
+  padding-left: 5px;
+  padding-right: 5px;
+  box-sizing: border-box;
+}
+
+/*# sourceMappingURL=mysass.css.map */

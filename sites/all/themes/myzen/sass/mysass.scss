@@ -1,0 +1,32 @@
+/* http://paletton.com/#uid=335180kjAtCrjEDtZu+8CysbEoD */
+$green: #3E9F7A;
+
+@import "zen-grids";
+$zen-columns: 7;
+$zen-gutters: 10px;
+
+body > div.layout-center > header > nav {
+    margin-top: -20px;
+
+    li a {
+        color: #fff;
+        text-decoration: none;
+    }
+
+    li a:hover {
+        text-decoration: underline;
+    }
+}
+
+.header, body > div.layout-center > div.layout-3col.layout-swap > div {
+    background: $green;
+    padding: 10px;
+}
+
+body > div.layout-center {
+    @include zen-grid-container();
+}
+
+#block-system-navigation {
+    @include zen-grid-item(7, 1);
+}
